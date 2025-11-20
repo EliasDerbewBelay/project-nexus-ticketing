@@ -1,8 +1,3 @@
-Great choice! 🎟️
-An **Event Booking & Ticketing System** built with **Next.js** is a powerful, professional-level project that will impress employers. Let’s design the full project from the ground up.
-
----
-
 # ✅ **PROJECT NEXUS — Event Booking & Ticketing System (Next.js)**
 
 Below is the **full blueprint**: features, system design, DB schema, architecture, and development steps.

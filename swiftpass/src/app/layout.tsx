@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SwiftPass",
-  description: "Event ticketing and pass system",
+  title: "SwiftPass - Event Ticketing System",
+  description: "Professional event ticketing and pass management system",
 };
 
 export default function RootLayout({
@@ -28,14 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
       >
-        <Navbar />
-
-        <div>
-          <Sidebar />
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <div className="flex flex-1">
+            <Sidebar />
+            <main className="flex-1 p-6 lg:p-8">
+              {children}
+            </main>
+          </div>
         </div>
-        {children}
       </body>
     </html>
   );
