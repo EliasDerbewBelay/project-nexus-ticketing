@@ -14,7 +14,6 @@ import {
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-
 export default function EventDetailsPage() {
   const { id } = useParams();
   const event = events.find((e) => e.id === Number(id));
@@ -86,7 +85,6 @@ export default function EventDetailsPage() {
               <DialogTitle>Select Ticket Type</DialogTitle>
             </DialogHeader>
 
-            {/* Ticket Types */}
             <div className="space-y-3 mt-4">
               {event.tickets.map((ticket, index) => (
                 <div
@@ -104,7 +102,6 @@ export default function EventDetailsPage() {
               ))}
             </div>
 
-            {/* Quantity */}
             {selectedTicket && (
               <div className="mt-4">
                 <p className="font-medium">Quantity</p>
@@ -128,7 +125,6 @@ export default function EventDetailsPage() {
               </div>
             )}
 
-            {/* Total Price */}
             {selectedTicket && (
               <div className="mt-4 text-xl font-semibold">
                 Total: {selectedTicket.price * quantity} ETB
@@ -141,7 +137,7 @@ export default function EventDetailsPage() {
                 onClick={() => {
                   if (!selectedTicket) return;
                   router.push(
-                    `/checkout?ticketType=${selectedTicket.type}&quantity=${quantity}`
+                    `/checkout?eventId=${event.id}&ticketType=${selectedTicket.type}&quantity=${quantity}`
                   );
                 }}
                 className={`w-full py-3 rounded-xl font-semibold ${
