@@ -231,15 +231,3 @@ Use **Recharts** to show:
 - README + screenshots
 - Deploy to Vercel
 
----
-
-# 🎯 **Next Step: Shall I prepare the wireframes + block diagram?**
-
-I can generate:
-
-- System block diagram
-- Full UI wireframes
-- ERD diagram
-- REST API documentation
-
-Just tell me **which one you want first**.
